@@ -108,14 +108,6 @@ DeclContext *Sema::computeDeclContext(const CXXScopeSpec &SS,
           // into that class template definition.
           QualType Injected
             = ClassTemplate->getInjectedClassNameSpecialization();
-#if 0
-llvm::errs()<<"\nhasSameType=\n";
-ClassTemplate->dump();
-Injected->dump();
-Injected->getCanonicalTypeInternal()->dump();
-ContextType->dump();
-ContextType->getCanonicalTypeInternal()->dump();
-#endif
           if (Context.hasSameType(Injected, ContextType))
             return ClassTemplate->getTemplatedDecl();
 

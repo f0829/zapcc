@@ -1,4 +1,3 @@
-// XFAIL: linux
 // Clear out the module cache entirely, so we start from nothing.
 // RUN: rm -rf %t
 

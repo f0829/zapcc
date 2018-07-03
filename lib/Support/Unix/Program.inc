@@ -24,8 +24,6 @@
 #include "llvm/Support/FileSystem.h"
 #include "llvm/Support/Path.h"
 #include "llvm/Support/raw_ostream.h"
-// Zapcc hack for breaking posix_spawn@@GLIBC_2.15 dependency
-#undef HAVE_POSIX_SPAWN
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
 #endif
